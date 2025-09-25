@@ -141,8 +141,20 @@ const prompt = require ("prompt-sync")();
 
      // #4
 
-     let name = "Mike John Maria"
-     let splitedName = name.split(" ")
-     cosnole.log(splitedName)
-     let joinedName = splitedName.join("_")
-     console.log(joinedName)
+    //  let name = "Mike John Maria"
+    //  let splitedName = name.split(" ")
+    //  cosnole.log(splitedName)
+    //  let joinedName = splitedName.join("_")
+    //  console.log(joinedName)
+
+    // Assignment:
+
+    function max(...numbers){
+        let result = -Infinity;
+        for(let number  of numbers){
+        if(number > result) result = number;
+        }
+        return result
+    }
+    console.log (max( 4, 3 , 67, 1));
+    
