@@ -176,19 +176,38 @@ const prompt = require ("prompt-sync")();
 
     // #3
 
-    let uA = prompt("Type whatever and i'll uppercase it!")
-    let uppercase = "";
+    // let uA = prompt("Type whatever you like and will uppercase it!")
+    // let uppercase = "";
 
-        for (let i = 0; i < uA.length; i++){
-        let ascii = uA.charCodeAt(i)
-        if (ascii >= 97 && ascii <= 127){
-        uppercase += String.fromCharCode(ascii - 32);
-        } else {
-        uppercase += uA[i]
-        }
-    }
-    console.log("This is how it would look uppercased:", uppercase)
+    //     for (let i = 0; i < uA.length; i++){
+    //     let ascii = uA.charCodeAt(i)
+    //     if (ascii >= 97 && ascii <= 127){
+    //     uppercase += String.fromCharCode(ascii - 32);
+    //     } else {
+    //     uppercase += uA[i]
+    //     }
+    // }
+    // console.log("This is how it would look uppercased:", uppercase)
 
     // #4
 
-    
+    let uA = prompt("Enter a string: ")
+    let result = "";
+
+        for(let i=0; i<uA.length; i++){
+        let char = uA[i];
+        let code = char.charCodeAt(0);
+        
+        if (code >= 97 && code <= 122){
+            result += String.fromCharCode(code - 32);
+        }
+
+        else if (code >= 65 && code <= 90){
+            result += String.fromCharCode(code + 32);
+        }
+        else{
+            result += char;
+        }
+    }
+    console.log("Inverted case: ", result);
+
