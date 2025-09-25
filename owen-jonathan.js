@@ -151,27 +151,44 @@ const prompt = require ("prompt-sync")();
 
     // #1
 
-    function max(...numbers){
-        let result = -Infinity;
-        for(let number  of numbers){
-        if(number > result) result = number;
-        }
-        return result
-    }
-    console.log (max( 4, 3 , 67, 1));
+    // function max(...numbers){
+    //     let result = -Infinity;
+    //     for(let number  of numbers){
+    //     if(number > result) result = number;
+    //     }
+    //     return result
+    // }
+    // console.log (max( 4, 3 , 67, 1));
 
     // #2
 
-    let uA = prompt("Enter in Numbers: ")
-    let reverse = "";
+    // let uA = prompt("Enter in Numbers: ")
+    // let reverse = "";
 
-        if (uA[0] === "-"){
-        reverse = "-" +uA.slice(1).split("").reverse("").join("");
+    //     if (uA[0] === "-"){
+    //     reverse = "-" +uA.slice(1).split("").reverse("").join("");
+    //     }
+    //     else 
+    //     {
+    //     reverse = uA.split("").reverse("").join("")
+    //     }
+    // console.log("Your reversed number would be: ", reverse);
+
+    // #3
+
+    let uA = prompt("Type whatever and i'll uppercase it!")
+    let uppercase = "";
+
+        for (let i = 0; i < uA.length; i++){
+        let ascii = uA.charCodeAt(i)
+        if (ascii >= 97 && ascii <= 127){
+        uppercase += String.fromCharCode(ascii - 32);
+        } else {
+        uppercase += uA[i]
         }
-        else 
-        {
-        reverse = uA.split("").reverse("").join("")
-        }
-    console.log("Your reversed number would be: ", reverse);
+    }
+    console.log("This is how it would look uppercased:", uppercase)
+
+    // #4
 
     
