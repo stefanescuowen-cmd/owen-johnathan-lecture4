@@ -149,6 +149,8 @@ const prompt = require ("prompt-sync")();
 
     // Assignment:
 
+    // #1
+
     function max(...numbers){
         let result = -Infinity;
         for(let number  of numbers){
@@ -157,4 +159,19 @@ const prompt = require ("prompt-sync")();
         return result
     }
     console.log (max( 4, 3 , 67, 1));
+
+    // #2
+
+    let uA = prompt("Enter in Numbers: ")
+    let reverse = "";
+
+        if (uA[0] === "-"){
+        reverse = "-" +uA.slice(1).split("").reverse("").join("");
+        }
+        else 
+        {
+        reverse = uA.split("").reverse("").join("")
+        }
+    console.log("Your reversed number would be: ", reverse);
+
     
